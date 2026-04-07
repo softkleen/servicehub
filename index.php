@@ -1,16 +1,20 @@
-<!-- já commitei -->
- <!-- outra..., viu -->
+<!-- conectar o arquivo header.php -->
+<?php 
+include "includes/header.php";
+include "includes/menu.php";
+?>
+
 <header class="container mt-4">
   <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
     <div class="carousel-inner rounded shadow">
       <div class="carousel-item active">
-        <img src="assets/img/banner1.jpg" class="d-block w-100 banner-img" alt="Banner 1">
+        <img src="assests/img/banner1.jpg" class="d-block w-100 banner-img" alt="Banner 1">
       </div>
       <div class="carousel-item">
-        <img src="assets/img/banner2.jpg" class="d-block w-100 banner-img" alt="Banner 2">
+        <img src="assests/img/banner2.jpg" class="d-block w-100 banner-img" alt="Banner 2">
       </div>
       <div class="carousel-item">
-        <img src="assets/img/banner3.jpg" class="d-block w-100 banner-img" alt="Banner 3">
+        <img src="assests/img/banner3.jpg" class="d-block w-100 banner-img" alt="Banner 3">
       </div>
     </div>
 
@@ -100,3 +104,6 @@
   </div>
 
 </main>
+<?php 
+include "includes/footer.php";
+?>
