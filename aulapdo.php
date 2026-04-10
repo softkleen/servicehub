@@ -36,10 +36,15 @@ $usuarios = $cmd->fetchAll(PDO::FETCH_ASSOC);
     <title>Aula PDO PHP</title>
 </head>
 <body>
+
+
     <form action="resform.php" method="post">
         <input type="text" name="txtid" id="">    
         <button type="submit">Enviar</button>
     </form>
+
+
+
     <h2>Lista de Serviços</h2>
     <table border="1" cellpadding = 10>
         <tr>
