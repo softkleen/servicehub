@@ -1,5 +1,6 @@
 <?php 
 require_once "config/conexao.php";
+$pdo = obterPdo();
 
 $cmd = $pdo->prepare("SELECT * FROM servicos WHERE descontinuado=b'0'");
 $cmd->execute();

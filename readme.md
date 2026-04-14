@@ -113,10 +113,10 @@ Recursos estáticos utilizados na interface.
 
 ## 9. Instruções de acesso:
 1. Admin:
-    * email: **admin@servicehub.com**
-    * senha: **admin123**
+    * email: admin@servicehub.com
+    * senha: admin123 ($2y$10$OMxvRxsT87BIvue9zhXcv.0Shp0PxRGbTmV2Pa90qCjqP87Dad7UW)
 2. Cliente criado automaticamente ao contratar:
-    * senha padrão: **123456**
+    * senha padrão: 123456
     será obrigado a alterar no primeiro login
 
 > **Nota:** Todas as páginas utilizam os arquivos da pasta `includes/` para manter o layout consistente.
