@@ -11,10 +11,13 @@ servicehub/
 ├── config/
 │   └── conexao.php
 │
+├── class/
+│   └── Usuario.php
+│
 ├── includes/
 │   ├── header.php
 │   ├── menu.php
-* │   ├── funcoes.php
+│   ├── funcoes.php
 │   └── footer.php
 │
 ├── assets/
@@ -33,19 +36,19 @@ servicehub/
 │
 ├── login.php
 ├── logout.php
-* ├── primeiro_login.php
+├── primeiro_login.php
 │
 ├── cliente_dashboard.php
 ├── cliente_detalhes.php
-* ├── cliente_perfil.php
+├── cliente_perfil.php
 │
 ├── admin_dashboard.php
 ├── admin_solicitacoes.php
 ├── admin_responder.php
 │
-* ├── admin_servicos.php
-* ├── admin_servicos_salvar.php
-* ├── admin_servicos_excluir.php
+├── admin_servicos.php
+├── admin_servicos_salvar.php
+├── admin_servicos_excluir.php
 │
 └── banco.sql
 
