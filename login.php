@@ -1,16 +1,15 @@
 <?php 
 
-// Desabilitar o cache para evitar o botão "voltar"
-header("Cache-Control: no-store, no-cache, must-revalidate, max-age=0");
-header("Cache-Control: post-check=0, pre-check=0", false);
-header("Pragma: no-cache");
-header("Expires: Sat, 26 Jul 1997 05:00:00 GMT"); // Data no passado
-
-
 session_start();//iniciar a sessão ou atualizar uma sessão aberta
+
+// Evita acesso se já estiver logado
+if(isset($_SESSION['usuario_id'])){
+  $destino = ($_SESSION['tipo'] == 1)?"admin_dashboard.php":"cliente_dashboard.php"; // estrutura do if ternário
+  header("location: $destino");
+}
+
 require "class/Usuario.php";
-  var_dump($_SESSION);
-//var_dump(Usuario::efetuarLogin('admin@servicehub.com', 'admin123'));
+
 $msg = "";
 if($_SERVER['REQUEST_METHOD']==="POST"){
   $email = filter_input(INPUT_POST, "email",FILTER_VALIDATE_EMAIL);
