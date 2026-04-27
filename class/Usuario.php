@@ -115,8 +115,6 @@ class Usuario{
     // Atualizar
     public function atualizar():bool{
         if(!$this->id) return false;
-        // var_dump($this->id);
-        // die();
         $sql = "UPDATE usuarios
                 set nome = :nome, email = :email, tipo = :tipo, ativo = :ativo,
                 primeiro_login = :primeiro_login
@@ -138,6 +136,16 @@ class Usuario{
         $sql = "UPDATE usuarios SET senha = :senha WHERE id = :id";
         $cmd = $this->pdo->prepare($sql);
         $cmd->bindValue(":senha", $senhaHash);
+        $cmd->bindValue(":id", $this->id, PDO::PARAM_INT);
+
+        return $cmd->execute();
+    }
+        // Excluir
+    public function excluir():bool{
+        if(!$this->id) return false;
+
+        $sql = "DELETE FROM usuarios WHERE id = :id";
+        $cmd = $this->pdo->prepare($sql);
         $cmd->bindValue(":id", $this->id, PDO::PARAM_INT);
 
         return $cmd->execute();
