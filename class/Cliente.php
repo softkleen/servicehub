@@ -62,12 +62,10 @@ class Cliente {
         $sql = "UPDATE clientes 
                 SET telefone = :telefone, cpf = :cpf
                 WHERE id = :id";
-
         $cmd = $this->pdo->prepare($sql);
         $cmd->bindValue(":id", $this->id, PDO::PARAM_INT);
         $cmd->bindValue(":telefone", $this->telefone);
         $cmd->bindValue(":cpf", $this->cpf);
-
         return $cmd->execute();
     }
 
