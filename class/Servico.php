@@ -88,7 +88,7 @@ class Servico {
     }
 
     public static function listarAtivos(): array {
-        $cmd = obterPdo()->query("SELECT * FROM servicos WHERE descontinuado=b'0' ORDER BY id DESC");
+        $cmd = obterPdo()->query("SELECT * FROM servicos WHERE descontinuado=b'0' ORDER BY nome ASC");
         return $cmd->fetchAll(PDO::FETCH_ASSOC);
     }
 
