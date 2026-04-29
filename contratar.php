@@ -1,4 +1,6 @@
 <?php 
+ include_once "class/Servico.php";
+
 include "includes/header.php";
 include "includes/menu.php";
 ?>
